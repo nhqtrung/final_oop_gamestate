@@ -20,11 +20,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Cooker.h" />
+    <ClInclude Include="Fighter.h" />
     <ClInclude Include="File.h" />
+    <ClInclude Include="ICharacter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Cooker.cpp" />
+    <ClCompile Include="Fighter.cpp" />
     <ClCompile Include="File.cpp" />
+    <ClCompile Include="ICharacter.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
