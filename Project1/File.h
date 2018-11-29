@@ -7,7 +7,7 @@ class File
 public:
 	File();
 	~File();
-	void readLastSaveFile(string fileName, int &totalCharacter, ICharacter character[100]);
-	void readActivitiesFile(string fileName);
+	void readLastSaveFile(string fileName, int &totalCharacter, ICharacter characters[100]);
+	void readActivitiesFile(string fileName, ICharacter characters[100], int totalCharacter);
 };
 

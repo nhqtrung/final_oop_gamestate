@@ -2,7 +2,9 @@
 #include <sstream>
 #include <stdio.h>
 #include <fstream>
+#include <iostream>
 #include <string>
+#include <vector>
 #include "ICharacter.h"
 #include "Cooker.h"
 #include "Fighter.h"
@@ -56,4 +58,31 @@ void File::readLastSaveFile(string fileName, int &totalCharacter, ICharacter cha
 		}
 	}
 	infile.close();
+}
+
+void File::readActivitiesFile(string fileName, ICharacter characters[100], int totalCharacter) {
+	string line;
+	ifstream infile;
+	infile.open(fileName);
+	if (infile)
+	{
+		while (getline(infile, line))
+		{
+			vector<string> activityInfo;
+			stringstream ssin(line);
+			while (ssin.good())
+			{
+				string temp;
+				ssin >> temp;
+				activityInfo.push_back(temp);
+			}	
+			if (activityInfo.at(0) == "Team")
+			{
+				for (int i = 0; i < totalCharacter; i++)
+				{
+					characters[i].fight()
+				}
+			}
+		}
+	}
 }

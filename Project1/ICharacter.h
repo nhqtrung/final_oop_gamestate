@@ -19,6 +19,7 @@ class ICharacter
 		int ap;
 		int apLevelUp;
 		int hpPerLevel;
+		//virtual void fight() = 0;
 };
 
 #endif
